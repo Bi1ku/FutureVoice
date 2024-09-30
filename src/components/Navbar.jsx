@@ -87,10 +87,10 @@ export default function Navbar() {
                 <a href='/'>Voting</a>
               </li>
               <li>
-                <a href='/explore'>Explore bills</a>
+                <a href='/explore'>Explore</a>
               </li>
               <li>
-                <a href='/learn-more'>Learn More</a>
+                <a href='/learn-more'>Learn</a>
               </li>
             </ul>
           </div>
