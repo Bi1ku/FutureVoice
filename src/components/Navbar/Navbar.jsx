@@ -58,19 +58,19 @@ export default function Navbar() {
       <div className={classNames("sidebar", { active: sidebar })}>
         <ul className="sidebar-links">
           <li>
-            <a href="/about">HOME</a>
+            <a href="/">HOME</a>
           </li>
           <li>
             <hr />
           </li>
           <li>
-            <a href="/sources">US</a>
+            <a href="/us">US</a>
           </li>
           <li>
             <hr />
           </li>
           <li>
-            <a href="/purpose">WHY</a>
+            <a href="/why">WHY</a>
           </li>
         </ul>
       </div>
@@ -88,7 +88,7 @@ export default function Navbar() {
           <div className="nav-link-center">
             <ul className="nav-links">
               <li>
-                <a href="/">Voting</a>
+                <a href="/voting">Voting</a>
               </li>
               <li>
                 <a href="/explore">Explore</a>
