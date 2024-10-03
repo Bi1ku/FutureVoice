@@ -7,6 +7,10 @@ function Explore() {
     const test = async () => {
       const res = await enhancedFetch("bill", "GOV");
 
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
+      });
       console.log(res);
     };
 
@@ -15,7 +19,7 @@ function Explore() {
 
   return (
     <Background>
-      <input />
+      <div></div>
     </Background>
   );
 }
