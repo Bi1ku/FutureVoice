@@ -1,11 +1,16 @@
-export const enhancedFetch = async (path: string, type: "GOOGLE" | "GOV") => {
+export const enhancedFetch = async (
+  type: "GEO" | "CONGRESS",
+  path?: string,
+) => {
   const url =
-    type == "GOOGLE"
-      ? `https://api.congress.gov/v3/${path}?api_key=mMFKAXFiZbObxOrJUXqFRAoW2TN3fcHCAfjiKMs6`
-      : `https://www.googleapis.com/civicinfo/v2/${path}?key=AIzaSyAJysr7AI2-ZjJl4KA9GbOki9EkWuqUEyE`;
+    type == "CONGRESS"
+      ? `https://api.congress.gov/v3/${path}?api_key=${process.env.REACT_APP_CONGRESS_API_KEY}`
+      : `https://api.geocod.io/v1.7/${path}&api_key=${process.env.REACT_APP_GEO_API_KEY}`;
 
   return fetch(url)
     .then((res) => res.json())
     .then((res) => res)
-    .catch(() => console.error("CONGRESS API FETCH FAILED"));
+    .catch(() => console.error(`${type} API FETCH FAILED`));
 };
+
+export const _ = undefined;
