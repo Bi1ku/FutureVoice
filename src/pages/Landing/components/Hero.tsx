@@ -24,7 +24,13 @@ function Hero() {
           <span className="relative text-yellow-400">
             <Typewriter
               options={{
-                strings: ["PARTICIPATE.", "IMPACT.", "VOTE."],
+                strings: [
+                  "PARTICIPATE.",
+                  "IMPACT.",
+                  "VOTE.",
+                  "EXPLORE.",
+                  "LEARN.",
+                ],
                 autoStart: true,
                 loop: true,
                 deleteSpeed: 40,
