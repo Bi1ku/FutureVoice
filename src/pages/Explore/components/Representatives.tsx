@@ -5,13 +5,12 @@ import RepInfoModal from "./RepInfoModal";
 
 function Representatives({ representatives }: { representatives: any }) {
   const [open, setOpen] = useState(false);
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
 
   return (
     <>
-      <ul
-        className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4 px-16"
-        onClick={() => setOpen(true)}
-      >
+      <ul className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4 px-16">
         {representatives ? (
           <>
             {representatives
@@ -21,6 +20,11 @@ function Representatives({ representatives }: { representatives: any }) {
               )
               .map((member: any, i: number) => (
                 <li
+                  onClick={() => {
+                    setOpen(true);
+                    setId(member.bioguideId);
+                    setName(member.name);
+                  }}
                   key={member.name}
                   className="bg-[#F1FAEE] shadow-lg rounded-2xl hover:cursor-pointer hover:-translate-y-2 duration-200"
                 >
@@ -56,7 +60,7 @@ function Representatives({ representatives }: { representatives: any }) {
           </>
         )}
       </ul>
-      <RepInfoModal open={open} setOpen={setOpen} />
+      <RepInfoModal open={open} setOpen={setOpen} id={id} name={name} />
     </>
   );
 }
