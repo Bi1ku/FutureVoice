@@ -55,7 +55,7 @@ function Representatives({ representatives }: { representatives: any }) {
         ) : (
           <>
             {new Array(8).fill(0).map((_, i) => (
-              <Skeleton height={428} key={i} className="rounded-2xl" />
+              <Skeleton height={428} key={i} borderRadius="0.75rem" />
             ))}
           </>
         )}
