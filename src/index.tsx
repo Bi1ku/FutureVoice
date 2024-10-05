@@ -10,6 +10,7 @@ import LearnMore from "./pages/LearnMore/LearnMore";
 import Explore from "./pages/Explore/Explore";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar/Navbar";
+import Bills from "./pages/Bills/Bills";
 
 const router = createBrowserRouter([
   {
@@ -25,12 +26,16 @@ const router = createBrowserRouter([
     element: <Purpose />,
   },
   {
-    path: "learn-more",
+    path: "/learn-more",
     element: <LearnMore />,
   },
   {
-    path: "explore",
+    path: "/explore",
     element: <Explore />,
+  },
+  {
+    path: "/bills",
+    element: <Bills />,
   },
 ]);
 

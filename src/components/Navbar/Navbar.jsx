@@ -12,11 +12,11 @@ export default function Navbar() {
   const toggle = useCallback(() => {
     // Prevents scrolling when sidebar is open
     if (sidebar) {
-      window.onscroll = function () {};
+      window.onscroll = function() { };
     } else if (!sidebar) {
       var x = window.scrollX;
       var y = window.scrollY;
-      window.onscroll = function () {
+      window.onscroll = function() {
         window.scrollTo(x, y);
       };
     }
@@ -88,7 +88,7 @@ export default function Navbar() {
           <div className="nav-link-center">
             <ul className="nav-links">
               <li>
-                <a href="/voting">Voting</a>
+                <a href="/bills">Bills</a>
               </li>
               <li>
                 <a href="/explore">Explore</a>
