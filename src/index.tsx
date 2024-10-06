@@ -4,15 +4,15 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
-import About from "./pages/About/About";
-import Purpose from "./pages/Purpose/Purpose";
-import LearnMore from "./pages/LearnMore/LearnMore";
+import LearnMore from "./pages/Resources/Resources";
 import Explore from "./pages/Explore/Explore";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar/Navbar";
 import Bills from "./pages/Bills/Bills";
 import PageNotFound from "./components/PageNotFound";
 import Footer from "./components/Footer";
+import Why from "./pages/Why/Why";
+import Us from "./pages/Us/Us";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +20,12 @@ const router = createBrowserRouter([
     element: <Landing />,
   },
   {
-    path: "/about",
-    element: <About />,
+    path: "/us",
+    element: <Us />,
   },
   {
-    path: "/purpose",
-    element: <Purpose />,
+    path: "/why",
+    element: <Why />,
   },
   {
     path: "/learn-more",
