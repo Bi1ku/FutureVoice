@@ -35,6 +35,7 @@ function Footer() {
             </span>
           </div>
         </div>
+        <hr className="w-1/2 mx-auto mt-6" />
         <p className="mt-6 text-center text-sm leading-5 tracking-wide text-gray-500">
           Copyright &copy; 2024 FutureVoice. All rights reserved.
         </p>

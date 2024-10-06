@@ -47,7 +47,7 @@ function Bills() {
   }, [page, filter]);
 
   return (
-    <div className="px-44 py-16 relative">
+    <div className="xl:px-44 py-16 lg:px-32 md:px-24 px-16 relative ">
       <Title />
 
       <div className="flex max-w-lg mt-2">
@@ -106,7 +106,7 @@ function Bills() {
         </div>
       </div>
 
-      <div className="px-4 sm:px-6 lg:px-16">
+      <div className="px-4 sm:px-6 xl:px-16 lg:px-6">
         <div className="mt-8 flow-root">
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">

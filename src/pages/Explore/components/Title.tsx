@@ -6,7 +6,7 @@ function Title({ district, state }: { state: string; district: number }) {
     <>
       <div className="max-w-2xl">
         <h3 className="text-5xl font-semibold text-[#1D3557]">EXPLORE</h3>
-        <p className="text-xl py-2">
+        <p className="md:text-xl text-md py-2">
           Your current and previous hardworking representatives, who constantly
           advocate for you and your family, and the legislation they work on.
         </p>
