@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import RepInfoModal from "./RepInfoModal";
+import InfoModal from "./InfoModal";
 
 function Representatives({ representatives }: { representatives: any }) {
   const [open, setOpen] = useState(false);
@@ -60,7 +60,7 @@ function Representatives({ representatives }: { representatives: any }) {
           </>
         )}
       </ul>
-      <RepInfoModal open={open} setOpen={setOpen} id={id} name={name} />
+      <InfoModal open={open} setOpen={setOpen} id={id} name={name} />
     </>
   );
 }

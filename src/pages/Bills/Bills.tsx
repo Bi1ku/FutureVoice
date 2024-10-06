@@ -1,3 +1,6 @@
+// TODO: SEARCH FILTERS
+// TODO: LOADING STATES
+
 import { useEffect, useState } from "react";
 import { enhancedFetch } from "../../globals";
 import {
@@ -7,13 +10,20 @@ import {
 import Title from "./components/Title";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import InfoModal from "./components/InfoModal";
 
 const pageSize = 15;
 
 function Bills() {
   const [data, setData] = useState<any>();
+  const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
+  const [modalData, setModalData] = useState({
+    url: "",
+    billNumber: 0,
+    title: "",
+  });
 
   useEffect(() => {
     const getData = async () => {
@@ -25,6 +35,7 @@ function Bills() {
 
       setData(res);
       setLoading(false);
+      console.log(res);
     };
 
     getData();
@@ -102,14 +113,23 @@ function Bills() {
                             {bill.updateDate}
                           </td>
                           <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                            <button className="text-[#457B9D] hover:text-[#E63946] duration-200">
+                            <button
+                              className="text-[#457B9D] hover:text-[#E63946] duration-200"
+                              onClick={() => {
+                                setModalData({
+                                  url: bill.url,
+                                  billNumber: bill.number,
+                                  title: bill.title,
+                                });
+                                setOpen(true);
+                              }}
+                            >
                               Details
                             </button>
                           </td>
                         </tr>
                       ))}
                   </tbody>
-                  )
                 </table>
               )}
               <div className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
@@ -172,6 +192,7 @@ function Bills() {
           </div>
         </div>
       </div>
+      <InfoModal open={open} setOpen={setOpen} modalData={modalData} />
     </div>
   );
 }

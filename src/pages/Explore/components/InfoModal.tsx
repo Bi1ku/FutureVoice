@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const reformatName = (name: string) => name.split(",").reverse().join(" ");
 
-function RepInfoModal({
+function InfoModal({
   open,
   setOpen,
   id,
@@ -186,4 +186,4 @@ function RepInfoModal({
   );
 }
 
-export default RepInfoModal;
+export default InfoModal;
