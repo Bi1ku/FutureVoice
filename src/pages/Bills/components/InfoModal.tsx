@@ -1,5 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import { enhancedFetch } from "../../../globals";
 
 const dehydrate = (html: string) => {
@@ -44,7 +46,6 @@ function InfoModal({
           `${baseUrl}/text?api_key=${process.env.REACT_APP_CONGRESS_API_KEY}&format=json`,
         ),
       ]);
-      console.log(data);
 
       setData(data);
       setLoading(false);
@@ -81,10 +82,12 @@ function InfoModal({
                   </h1>
                   <p className="mt-2 text-gray-800">{modalData.title}</p>
                   <p className="mt-4 text-sm text-gray-700">
-                    {data && data[0] && data[0].summaries[0] ? (
+                    {loading ? (
+                      <Skeleton count={5} width={832} />
+                    ) : data && data[0] && data[0].summaries[0] ? (
                       dehydrate(data[0].summaries[0].text)
                     ) : (
-                      <span className="font-bold text-sm">
+                      <span className="font-bold text-black">
                         [NO SUMMARIES YET]
                       </span>
                     )}
@@ -92,7 +95,9 @@ function InfoModal({
                 </div>
               </div>
               <div className="mt-4 grid grid-cols-3 gap-4">
-                {data && data[1] && data[1].textVersions[0] ? (
+                {loading ? (
+                  <Skeleton width={832} height={200} />
+                ) : data && data[1] && data[1].textVersions[0] ? (
                   data[1].textVersions.map((text: any, i: number) => (
                     <div className="flex flex-col" key={i}>
                       <span className="font-semibold text-sm">{text.type}</span>
@@ -112,7 +117,9 @@ function InfoModal({
                     </div>
                   ))
                 ) : (
-                  <span className="font-bold text-sm">[NO DOCUMENTS YET]</span>
+                  <span className="font-bold text-sm text-black">
+                    [NO DOCUMENTS YET]
+                  </span>
                 )}
               </div>
             </div>

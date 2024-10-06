@@ -29,7 +29,6 @@ function Explore() {
         );
 
         setRepresentatives(congressRes.members);
-        console.log(representatives);
       }
     });
   }, [state, district]); // eslint-disable-line react-hooks/exhaustive-deps

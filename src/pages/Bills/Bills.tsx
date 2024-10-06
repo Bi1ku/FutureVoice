@@ -24,26 +24,87 @@ function Bills() {
     billNumber: 0,
     title: "",
   });
+  const [filter, setFilter] = useState({
+    congress: 0,
+    from: "",
+    to: "",
+  });
 
   useEffect(() => {
     const getData = async () => {
       setLoading(true);
+
       const res = await enhancedFetch(
         "CUSTOM",
-        `https://api.congress.gov/v3/bill?offset=${(page - 1) * pageSize}&limit=${pageSize}&format=json&api_key=${process.env.REACT_APP_CONGRESS_API_KEY}`,
+        `https://api.congress.gov/v3/bill${filter.congress ? `/${filter.congress}` : ""}?offset=${(page - 1) * pageSize}&limit=${pageSize}&format=json&api_key=${process.env.REACT_APP_CONGRESS_API_KEY}${filter.from ? `&fromDateTime=${filter.from}` : ""}${filter.to ? `&toDateTime=${filter.to}` : ""}`,
       );
 
       setData(res);
       setLoading(false);
-      console.log(res);
     };
 
     getData();
-  }, [page]);
+  }, [page, filter]);
 
   return (
     <div className="px-44 py-16 relative">
       <Title />
+
+      <div className="flex max-w-lg mt-2">
+        <div className="mr-4 w-1/5">
+          <label className="block text-sm font-medium leading-6 text-gray-900">
+            Congress
+          </label>
+          <input
+            type="number"
+            onBlur={(e) => setFilter({ ...filter, congress: +e.target.value })}
+            placeholder="118"
+            className="w-full block rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:focus-blue-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+
+        <div className="mr-4 w-2/5">
+          <label className="block text-sm font-medium leading-6 text-gray-900">
+            From
+          </label>
+          <input
+            type="date"
+            onBlur={(e) =>
+              setFilter({
+                ...filter,
+                from: e.target.value
+                  ? new Date(e.target.value)
+                    .toISOString()
+                    .replace(/\.\d{3}/, "")
+                  : "",
+              })
+            }
+            placeholder="118"
+            className="w-full block rounded-md border-0 py-1.5 pr-2 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:focus-blue-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+
+        <div className="mr-4 w-2/5">
+          <label className="block text-sm font-medium leading-6 text-gray-900">
+            To
+          </label>
+          <input
+            type="date"
+            onBlur={(e) =>
+              setFilter({
+                ...filter,
+                to: e.target.value
+                  ? new Date(e.target.value)
+                    .toISOString()
+                    .replace(/\.\d{3}/, "")
+                  : "",
+              })
+            }
+            placeholder="118"
+            className="w-full block rounded-md border-0 py-1.5 pr-2 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:focus-blue-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
 
       <div className="px-4 sm:px-6 lg:px-16">
         <div className="mt-8 flow-root">
@@ -188,7 +249,7 @@ function Bills() {
                   </button>
                 </div>
               </div>
-            </div>
+            </div>{" "}
           </div>
         </div>
       </div>
