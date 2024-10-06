@@ -47,7 +47,7 @@ function Bills() {
   }, [page, filter]);
 
   return (
-    <div className="xl:px-44 py-16 lg:px-32 md:px-24 px-16 relative ">
+    <div className="xl:px-44 py-16 lg:px-32 md:px-24 px-16 relative">
       <Title />
 
       <div className="flex max-w-lg mt-2">

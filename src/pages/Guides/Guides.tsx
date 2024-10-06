@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import "./Resources.css";
+import "./Guides.css";
 
-export default function LearnMore() {
+export default function Guides() {
   return (
     <>
       <motion.div

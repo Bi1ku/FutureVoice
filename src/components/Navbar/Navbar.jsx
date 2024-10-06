@@ -70,7 +70,7 @@ export default function Navbar() {
             <hr />
           </li>
           <li>
-            <a href="/why">WHY</a>
+            <a href="/guides">GUIDES</a>
           </li>
         </ul>
       </div>
@@ -94,7 +94,7 @@ export default function Navbar() {
                 <a href="/explore">Explore</a>
               </li>
               <li>
-                <a href="/learn-more">Learn</a>
+                <a href="/why">Why</a>
               </li>
             </ul>
           </div>

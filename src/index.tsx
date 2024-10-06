@@ -4,7 +4,6 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
-import LearnMore from "./pages/Resources/Resources";
 import Explore from "./pages/Explore/Explore";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,6 +12,7 @@ import PageNotFound from "./components/PageNotFound";
 import Footer from "./components/Footer";
 import Why from "./pages/Why/Why";
 import Us from "./pages/Us/Us";
+import Guides from "./pages/Guides/Guides";
 
 const router = createBrowserRouter([
   {
@@ -28,8 +28,8 @@ const router = createBrowserRouter([
     element: <Why />,
   },
   {
-    path: "/learn-more",
-    element: <LearnMore />,
+    path: "/guides",
+    element: <Guides />,
   },
   {
     path: "/explore",
