@@ -1,5 +1,4 @@
 import Features from "./components/Features";
-import Find from "./components/Find";
 import Hero from "./components/Hero";
 
 function Landing() {
@@ -7,7 +6,6 @@ function Landing() {
     <>
       <Hero />
       <Features />
-      <Find />
     </>
   );
 }

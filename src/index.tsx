@@ -11,6 +11,8 @@ import Explore from "./pages/Explore/Explore";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar/Navbar";
 import Bills from "./pages/Bills/Bills";
+import PageNotFound from "./components/PageNotFound";
+import Footer from "./components/Footer";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
     path: "/bills",
     element: <Bills />,
   },
+  {
+    path: "*",
+    element: <PageNotFound />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(
@@ -48,6 +54,7 @@ root.render(
     <Background>
       <Navbar />
       <RouterProvider router={router} />
+      <Footer />
     </Background>
   </React.StrictMode>,
 );
