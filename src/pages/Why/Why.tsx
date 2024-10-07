@@ -1,12 +1,13 @@
-import Title from "./components/Title";
-
 function Why() {
   return (
-    <div className="xl:px-44 pt-16 lg:px-32 md:px-24 px-16 relative">
-      <Title />
+    <div className='xl:px-44 pt-16 lg:px-32 md:px-24 px-16 relative'>
+      <div className='max-w-2xl'>
+        <h3 className='text-5xl font-semibold text-[#1D3557]'>WHYWHYWHY</h3>
+        <p className='text-xl py-2'>why is voting important :D</p>
+      </div>
 
-      <div className="px-4 sm:px-6 xl:px-16 lg:px-6">
-        <div className="mt-2 text-lg">
+      <div className='px-4 sm:px-6 xl:px-16 lg:px-6'>
+        <div className='mt-2 text-lg'>
           Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse at
           ultrices venenatis adipiscing nec proin turpis justo. Interdum est
           molestie libero bibendum conubia auctor. Bibendum imperdiet sem
@@ -25,7 +26,7 @@ function Why() {
 
         <br />
 
-        <div className="grid grid-cols-2 text-lg gap-6">
+        <div className='grid grid-cols-2 text-lg gap-6'>
           <span>
             Nostra suspendisse mauris mattis est eleifend sagittis. Cubilia
             montes varius magnis dolor vitae magnis mauris. Netus mollis mollis
@@ -49,16 +50,16 @@ function Why() {
           </span>
 
           <img
-            src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png"
-            className="object-cover w-full rounded-lg"
+            src='https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png'
+            className='object-cover w-full rounded-lg'
           />
         </div>
 
         <br />
-        <div className="grid grid-cols-2 text-lg gap-6">
+        <div className='grid grid-cols-2 text-lg gap-6'>
           <img
-            src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png"
-            className="object-cover w-full rounded-lg"
+            src='https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png'
+            className='object-cover w-full rounded-lg'
           />
           <span>
             Nostra suspendisse mauris mattis est eleifend sagittis. Cubilia
@@ -84,7 +85,7 @@ function Why() {
         </div>
 
         <br />
-        <div className="mt-2 text-lg">
+        <div className='mt-2 text-lg'>
           Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse at
           ultrices venenatis adipiscing nec proin turpis justo. Interdum est
           molestie libero bibendum conubia auctor. Bibendum imperdiet sem
@@ -104,8 +105,8 @@ function Why() {
         <br />
         <div>
           <img
-            src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png"
-            className="object-cover w-full rounded-lg"
+            src='https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png'
+            className='object-cover w-full rounded-lg'
           />
         </div>
       </div>

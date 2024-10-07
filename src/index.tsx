@@ -1,52 +1,52 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Landing from "./pages/Landing/Landing";
-import Explore from "./pages/Explore/Explore";
-import Background from "./components/Background";
-import Navbar from "./components/Navbar/Navbar";
-import Bills from "./pages/Bills/Bills";
-import PageNotFound from "./components/PageNotFound";
-import Footer from "./components/Footer";
-import Why from "./pages/Why/Why";
-import Us from "./pages/Us/Us";
-import Guides from "./pages/Guides/Guides";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Landing from './pages/Landing/Landing';
+import Explore from './pages/Explore/Explore';
+import Background from './components/Background';
+import Navbar from './components/Navbar/Navbar';
+import Bills from './pages/Bills/Bills';
+import PageNotFound from './components/PageNotFound';
+import Footer from './components/Footer';
+import Why from './pages/Why/Why';
+import Us from './pages/Us/Us';
+import Learn from './pages/Learn/Learn';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Landing />,
   },
   {
-    path: "/us",
+    path: '/us',
     element: <Us />,
   },
   {
-    path: "/why",
+    path: '/why',
     element: <Why />,
   },
   {
-    path: "/guides",
-    element: <Guides />,
+    path: '/learn',
+    element: <Learn />,
   },
   {
-    path: "/explore",
+    path: '/explore',
     element: <Explore />,
   },
   {
-    path: "/bills",
+    path: '/bills',
     element: <Bills />,
   },
   {
-    path: "*",
+    path: '*',
     element: <PageNotFound />,
   },
 ]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
+  document.getElementById('root') as HTMLElement
 );
 
 root.render(
@@ -56,7 +56,7 @@ root.render(
       <RouterProvider router={router} />
       <Footer />
     </Background>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
