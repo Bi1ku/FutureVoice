@@ -19,7 +19,7 @@ function Us() {
   ];
 
   return (
-    <div className="xl:px-44 py-16 lg:px-32 md:px-24 px-16 relative ">
+    <div className="xl:px-44 pt-16 lg:px-32 md:px-24 px-16 relative ">
       <div className="max-w-2xl">
         <h3 className="text-5xl font-semibold text-[#1D3557]">US</h3>
         <p className="text-xl py-2">
