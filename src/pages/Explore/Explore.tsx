@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { enhancedFetch } from "../../globals";
+import Others from "./components/Others";
 import Representatives from "./components/Representatives";
 import Title from "./components/Title";
 
@@ -34,9 +35,10 @@ function Explore() {
   }, [state, district]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="xl:px-44 py-16 lg:px-32 md:px-24 px-16 relative">
+    <div className="xl:px-44 pt-16 lg:px-32 md:px-24 px-16 relative">
       <Title state={state} district={district} />
       <Representatives representatives={representatives} />
+      <Others />
     </div>
   );
 }

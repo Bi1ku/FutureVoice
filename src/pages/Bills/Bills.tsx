@@ -207,9 +207,9 @@ function Bills() {
                   <button
                     onClick={() => setPage(page - 1)}
                     className={`inline-flex items-center pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 ${
-                      page - 1 < 0 && "cursor-not-allowed"
+                      page - 1 <= 0 && "cursor-not-allowed"
                     }`}
-                    disabled={page - 1 < 0}
+                    disabled={page - 1 <= 0}
                   >
                     <ArrowLongLeftIcon
                       aria-hidden="true"
@@ -222,7 +222,7 @@ function Bills() {
                   <button
                     onClick={() => setPage(1)}
                     className={`inline-flex items-center ${
-                      page === 1 ? "text-[#457B9D]" : "text-gray-500"
+                      page === 1 ? "text-[#457B9D] font-bold" : "text-gray-500"
                     } px-4 pt-4 text-sm font-medium hover:border-gray-300 hover:text-gray-700`}
                   >
                     1
@@ -243,7 +243,7 @@ function Bills() {
                   >
                     3
                   </button>{" "}
-                  <span className="inline-flex items-center   px-4 pt-4 text-sm font-medium text-gray-500">
+                  <span className="inline-flex items-center px-4 pt-4 text-sm font-medium text-gray-500">
                     ...
                   </span>
                   <input
