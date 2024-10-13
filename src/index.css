@@ -7,8 +7,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+:focus {
+  outline: none;
+}
 ::-webkit-scrollbar {
   display: none;
+}
+.state {
+  width: 100%;
+  padding: 0px 8px;
+  height: 36px;
+  /* block border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 bg-white */
+}
+.state * {
+  margin-left: 2px;
+  background-color: blue;
+  font-size: 20px;
 }
 
 code {

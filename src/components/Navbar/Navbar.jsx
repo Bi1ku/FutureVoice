@@ -1,13 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import logo from './logo.png';
 import './Navbar.css';
 import classNames from 'classnames';
 
 export default function Navbar() {
-  const [dropdown, setDropdown] = useState(false);
   const [sidebar, setSidebar] = useState(false);
-  const btnRef = useRef();
 
   const toggle = useCallback(() => {
     // Prevents scrolling when sidebar is open
@@ -34,20 +32,6 @@ export default function Navbar() {
       document.removeEventListener('keydown', keyPress, false);
     };
   }, [toggle, sidebar]);
-
-  useEffect(() => {
-    // Closes dropdown when clicking outside of it
-    const closeDropdown = (e) => {
-      if (
-        e.target &&
-        !e.target.contains(btnRef.current) &&
-        e.target.className !== 'dropdown-links'
-      )
-        setDropdown(false);
-    };
-    document.body.addEventListener('click', closeDropdown);
-    return () => document.body.removeEventListener('click', closeDropdown);
-  }, [dropdown]);
 
   return (
     <>
