@@ -31,6 +31,12 @@ select {
   font-size: 20px;
 }
 
+@media screen and (max-width: 1524px) {
+  tr td {
+    padding: 0.5rem !important;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

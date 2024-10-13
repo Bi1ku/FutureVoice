@@ -1,0 +1,77 @@
+.half-hero {
+  background-image: url('https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/PMCMS/8hvq3jnf_u2wz9sg7x2lua.jpg');
+  background-size: cover;
+  height: 80vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 75px;
+  color: #f1faee;
+  background-color: rgba(45, 45, 45, 0.8);
+  width: auto;
+  padding: 0px 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.info {
+  background-image: url('https://www.triphacksdc.com/wp-content/uploads/2019/07/shutterstock_112994140-1024x825.jpg');
+  background-size: auto;
+  height: 700px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  background-position-x: center;
+}
+
+.text-box {
+  background-color: #f1faee;
+  width: 60%;
+  font-size: 25px;
+  padding: 25px;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 1524px) {
+  .text-box {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .text-box {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 898px) {
+  .text-box {
+    width: 90%;
+    font-size: 20px;
+  }
+  .text {
+    font-size: 45px;
+  }
+  .half-hero {
+    height: 50vh;
+  }
+}
+
+.resources a {
+  color: var(--pink);
+}
+
+.resources a:hover {
+  color: var(--flickr-pink);
+}
+
+.resources {
+  list-style-type: disc;
+  padding-left: 25px;
+}

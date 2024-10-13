@@ -40,6 +40,10 @@
   display: block;
 }
 
+.doggie.dropdown-active {
+  height: 50px;
+}
+
 .dropdown-btn {
   display: flex;
   justify-content: space-between;

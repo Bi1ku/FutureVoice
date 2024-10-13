@@ -6,7 +6,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import { enhancedFetch } from '../../../globals';
-import InfoModal from './InfoModal';
+import InfoModal from './InfoModal.jsx';
 import { useRef } from 'react';
 import classNames from 'classnames';
 import './bruhlmao.css';
@@ -192,7 +192,7 @@ function Others() {
 
   return (
     <>
-      <div className='xl:px-16 lg:px-6 mt-16'>
+      <div className='md:px-4 sm:px-1 mt-16'>
         <div className='flex max-w-lg mt-2'>
           <div className='mr-4 w-2/5'>
             <label className='block text-sm font-medium leading-6 text-gray-900'>
@@ -285,7 +285,7 @@ function Others() {
           </div>
         </div>
 
-        <div className='px-4 sm:px-6 xl:px-16 lg:px-6'>
+        <div className='px-0 md:px-4 lg:px-6'>
           <div className='mt-8 flow-root'>
             <div className='-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
               <div className='inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8'>

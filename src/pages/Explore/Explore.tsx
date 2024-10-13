@@ -35,7 +35,7 @@ function Explore() {
   }, [state, district]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className='xl:px-44 pt-16 lg:px-32 md:px-24 px-16 relative'>
+    <div className='xl:px-30 pt-16 lg:px-24 md:px-16 px-4 relative'>
       <Title state={state} district={district} />
       <Representatives representatives={representatives} />
       <Others />
