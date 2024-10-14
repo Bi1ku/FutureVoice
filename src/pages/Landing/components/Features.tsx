@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 function Features() {
   return (
-    <section id="features" className="py-16">
+    <section id="features" className="pt-16">
       <h2 className="text-4xl font-bold text-center text-[#1D3557] mb-12">
         Our Features
       </h2>

@@ -49,6 +49,7 @@ nav {
 .nav-link-center {
   width: 100%;
   display: flex;
+  margin-right: 100.5px;
   justify-content: center;
 }
 
@@ -76,7 +77,9 @@ nav {
   height: 120%;
   opacity: 0;
   width: calc(30vw - 36px - 2rem);
-  transition: transform 0.5s, opacity 0.5s linear;
+  transition:
+    transform 0.5s,
+    opacity 0.5s linear;
   background-clip: content-box;
 }
 
@@ -89,7 +92,9 @@ nav {
   position: fixed;
   transform: translateX(calc(100vw));
   opacity: 0;
-  transition: transform 0.5s, opacity 0.5s linear;
+  transition:
+    transform 0.5s,
+    opacity 0.5s linear;
   transition-delay: 50ms;
   width: calc(36px + 2rem + 10px);
   height: 150vh;
@@ -118,6 +123,10 @@ nav {
 @media only screen and (max-width: 1428px) {
   .logo {
     display: none;
+  }
+
+  .nav-link-center {
+    margin-right: 0;
   }
 
   .nav-container {
@@ -150,7 +159,7 @@ nav {
   }
 }
 .logo {
-  height: 50px;
+  height: 40px;
   width: auto;
   object-fit: cover;
   cursor: pointer;
@@ -172,7 +181,9 @@ nav {
   width: 70vw;
   opacity: 0;
   z-index: 200;
-  transition: transform 0.7s, opacity 0.5s ease-in-out;
+  transition:
+    transform 0.7s,
+    opacity 0.5s ease-in-out;
 }
 
 .tint.active-tint {
@@ -181,7 +192,9 @@ nav {
 }
 
 .burger {
-  transition: transform 0.3s, opacity 0.1s ease-in-out;
+  transition:
+    transform 0.3s,
+    opacity 0.1s ease-in-out;
   opacity: 1;
   cursor: pointer;
   width: 36px;
@@ -199,7 +212,10 @@ nav {
   height: 2px;
   background-color: #f1faee;
   margin: 5px;
-  transition: background-color 0.5s, opacity 0.5s, transform 0.5s ease-in-out;
+  transition:
+    background-color 0.5s,
+    opacity 0.5s,
+    transform 0.5s ease-in-out;
 }
 
 .burger.active-burger div {

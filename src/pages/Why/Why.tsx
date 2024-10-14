@@ -12,7 +12,8 @@ function Why() {
       <div className="px-4 sm:px-6 xl:px-16 lg:px-6 pt-6">
         <div className="mb-6">
           <img
-            src="/images/why/picture1.png"
+            src="/images/why/picture1.jpg"
+            alt="Youth protesting against pressing political issues"
             className="object-cover w-full rounded-lg shadow-lg aspect-[10/4.5]"
           />
         </div>
@@ -60,6 +61,7 @@ function Why() {
 
           <img
             src="/images/why/picture2.png"
+            alt="Graph showing low youth voter turnouts"
             className="object-cover w-full rounded-lg shadow-lg"
           />
         </div>
@@ -68,6 +70,7 @@ function Why() {
         <div className="grid grid-cols-2 text-lg gap-6 place-items-center">
           <img
             src="/images/why/picture3.webp"
+            alt="Graph showing low youth voter turnouts"
             className="object-cover w-full rounded-lg shadow-lg"
           />
           <span>
@@ -111,6 +114,7 @@ function Why() {
         <br />
         <div>
           <img
+            alt="People advocating for political participation in youth"
             src="/images/why/picture4.jpg"
             className="object-cover w-full rounded-lg shadow-lg aspect-[10/4.5]"
           />

@@ -1,5 +1,5 @@
 .half-hero {
-  background-image: url('https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/PMCMS/8hvq3jnf_u2wz9sg7x2lua.jpg');
+  background-image: url("https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/PMCMS/8hvq3jnf_u2wz9sg7x2lua.jpg");
   background-size: cover;
   height: 80vh;
   width: auto;
@@ -19,14 +19,14 @@
 }
 
 .info {
-  background-image: url('https://www.triphacksdc.com/wp-content/uploads/2019/07/shutterstock_112994140-1024x825.jpg');
+  background-image: url("https://www.triphacksdc.com/wp-content/uploads/2019/07/shutterstock_112994140-1024x825.jpg");
   background-size: auto;
   height: 700px;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px;
+  margin: 40px 40px 0px 40px;
   background-position-x: center;
 }
 
