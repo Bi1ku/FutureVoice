@@ -1,4 +1,4 @@
-## FutureVoice 🧐
+## FutureVoice
 
 <u>**By**</u>: Owen Shi & Leo Ling
 
